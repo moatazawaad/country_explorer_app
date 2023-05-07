@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../core/utils/app_colors.dart';
-import '../../core/utils/app_colors.dart';
 
 ThemeData getThemeDataLight() => ThemeData(
-  useMaterial3: true,
+      useMaterial3: true,
       scaffoldBackgroundColor: AppColors.white,
       primaryColor: AppHexColors.darkBlue,
-      hintColor: Colors.grey,
+      hintColor: AppColors.grey,
       appBarTheme: const AppBarTheme(
         // color: AppColors.white,
         elevation: 0,
@@ -24,14 +23,18 @@ ThemeData getThemeDataLight() => ThemeData(
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           elevation: MaterialStatePropertyAll(8),
-          // backgroundColor: MaterialStatePropertyAll(Colors.white),
-          // foregroundColor: MaterialStatePropertyAll(AppHexColors.darkBlue),
+          backgroundColor: MaterialStatePropertyAll(AppHexColors.darkBlue),
         ),
       ),
       textTheme: TextTheme(
+        headlineLarge: TextStyle(fontSize: 24, color: AppHexColors.violet),
         bodyMedium: TextStyle(
-          color: AppColors.white,
+          color: AppHexColors.darkBlue,
           fontSize: 16,
+          decoration: TextDecoration.underline,
+          decorationColor: AppHexColors.darkBlue,
+          decorationThickness: 1.5,
+          decorationStyle: TextDecorationStyle.solid,
         ),
         bodySmall: TextStyle(
           color: AppHexColors.darkBlue,
@@ -40,19 +43,22 @@ ThemeData getThemeDataLight() => ThemeData(
         bodyLarge: TextStyle(
           color: AppHexColors.darkBlue,
           fontSize: 16,
-          // decoration: TextDecoration.underline,
-          // decorationColor: AppHexColors.darkBlue,
-          // decorationThickness: 1.5,
-          // decorationStyle: TextDecorationStyle.solid,
         ),
         titleLarge: TextStyle(
-          color: AppHexColors.darkBlue,
+          color: AppColors.white,
           fontSize: 16,
         ),
-      labelLarge: TextStyle(
-        fontSize: 20, color: Colors.redAccent,
-      ),
-        labelMedium: TextStyle(fontSize: 18, color: Colors.black,),
-        labelSmall: TextStyle(fontSize: 18, color: Colors.grey,),
+        labelLarge: TextStyle(
+          fontSize: 20,
+          color: AppColors.redAccent,
+        ),
+        labelMedium: TextStyle(
+          fontSize: 14,
+          color: AppColors.redAccent,
+        ),
+        labelSmall: TextStyle(
+          fontSize: 18,
+          color: AppColors.grey,
+        ),
       ),
     );
