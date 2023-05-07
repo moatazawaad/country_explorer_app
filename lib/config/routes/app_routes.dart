@@ -1,12 +1,12 @@
-import 'package:country_explorer/features/all_countries/presentation/screens/country_details_screen.dart';
-import 'package:country_explorer/features/all_countries/presentation/screens/search_name_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../features/all_countries/data/models/countries_model.dart';
-import '../../features/all_countries/presentation/controller/country_cubit.dart';
-import '../../features/all_countries/presentation/screens/all_coutries_screen.dart';
-import '../../features/all_countries/presentation/screens/home_screen.dart';
+import '../../features/countries/data/models/countries_model.dart';
+import '../../features/countries/presentation/controller/country_cubit.dart';
+import '../../features/countries/presentation/screens/all_coutries_screen.dart';
+import '../../features/countries/presentation/screens/country_details_screen.dart';
+import '../../features/countries/presentation/screens/home_screen.dart';
+import '../../features/countries/presentation/screens/search_name_screen.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../injection.dart';
 

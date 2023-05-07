@@ -1,8 +1,6 @@
-import 'package:country_explorer/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-
-import 'core/utils/app_hex_colors.dart';
+import 'features/countries/presentation/components/app_bar.dart';
 
 class WebViewScreen extends StatefulWidget {
   WebViewScreen({Key? key, required this.url}) : super(key: key);
@@ -45,14 +43,7 @@ class _WebViewScreenState extends State<WebViewScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-         centerTitle: true,
-        backgroundColor: AppHexColors.indigo2,
-        // title: WebViewWidget(
-        //   controller: controller,
-        // ),
-        title: Text(AppStrings.appName, style: Theme.of(context).textTheme.bodyMedium,),
-      ),
+      appBar: MyAppBar(showThemeButton: false,),
       body: SizedBox(
         width: double.infinity,
         height: 1000, // Set a fixed height here

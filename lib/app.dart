@@ -1,10 +1,10 @@
 import 'package:country_explorer/config/themes/theme_data_light.dart';
-import 'package:country_explorer/features/all_countries/presentation/controller/app_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'config/routes/app_routes.dart';
 import 'config/themes/thene_data_dark.dart';
 import 'core/utils/app_strings.dart';
+import 'features/countries/presentation/controller/app_cubit.dart';
 import 'injection.dart';
 
 class CountryExplorer extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:country_explorer/core/api/status_code.dart';
-import 'package:country_explorer/features/all_countries/data/models/countries_model.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
+import '../../features/countries/data/models/countries_model.dart';
 import '../error/full_exception.dart';
 import '../network/remote/end_points.dart';
 import 'api_consumer.dart';

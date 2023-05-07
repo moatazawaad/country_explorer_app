@@ -3,7 +3,6 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:country_explorer/core/utils/app_strings.dart';
 import 'package:flutter/material.dart';
 import '../../../../config/routes/app_routes.dart';
-import '../../../../core/utils/app_hex_colors.dart';
 import '../../../../core/utils/asstes_manager.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -48,10 +47,7 @@ class _SplashScreenState extends State<SplashScreen> {
             animatedTexts: [
               TyperAnimatedText(
                 AppStrings.exploreTheWorld,
-                textStyle: const TextStyle(
-                  color: AppHexColors.darkBlue,
-                  fontSize: 24,
-                ),
+              textStyle: Theme.of(context).textTheme.headlineLarge,
               ),
             ],
             onTap: () {},

@@ -1,4 +1,3 @@
-import 'package:country_explorer/core/utils/app_hex_colors.dart';
 import 'package:country_explorer/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import '../utils/app_strings.dart';
@@ -46,15 +45,9 @@ class NoConnectionScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30))),
               child: Text(
                 AppStrings.reloadScreen,
-                style: Theme.of(context).textTheme.labelMedium,
+                style: Theme.of(context).textTheme.titleLarge,
               ),
-              // onPressed: () {
-              //   if (onPress != null) {
-              //     onPress!();
-              //   }
-              // },
               onPressed: () {
-                // onRetry!(message!);
                 onPress!();
               },
             ),
