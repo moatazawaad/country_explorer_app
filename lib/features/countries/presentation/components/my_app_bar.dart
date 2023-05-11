@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../core/utils/app_hex_colors.dart';
 import '../../../../core/utils/app_strings.dart';
 import '../../../../core/utils/asstes_manager.dart';
-import '../controller/app_cubit.dart';
+import '../controller/app_theme_cubit.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   MyAppBar({Key? key, required this.showThemeButton}) : super(key: key);
@@ -24,11 +24,11 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       leading: showThemeButton
           ? IconButton(
-        icon: AppCubit.get(context).isDark
+        icon: AppThemeCubit.get(context).isDark
             ? const Icon(Icons.nightlight_outlined)
             : const Icon(Icons.wb_sunny_outlined),
         onPressed: () {
-          AppCubit.get(context).changeAppTheme();
+          AppThemeCubit.get(context).changeAppTheme();
         },
       )
           : null,

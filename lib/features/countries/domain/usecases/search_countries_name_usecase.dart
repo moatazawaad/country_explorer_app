@@ -1,4 +1,4 @@
-import 'package:country_explorer/core/error/full_failure.dart';
+import 'package:country_explorer/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import '../../../../core/usecases/usecases.dart';

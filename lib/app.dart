@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'config/routes/app_routes.dart';
 import 'config/themes/thene_data_dark.dart';
 import 'core/utils/app_strings.dart';
-import 'features/countries/presentation/controller/app_cubit.dart';
+import 'features/countries/presentation/controller/app_theme_cubit.dart';
 import 'injection.dart';
 
 class CountryExplorer extends StatelessWidget {
@@ -16,15 +16,15 @@ class CountryExplorer extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          getIt<AppCubit>()..changeAppTheme(fromShared: isDark),
-      child: BlocBuilder<AppCubit, AppState>(
+          getIt<AppThemeCubit>()..changeAppTheme(fromShared: isDark),
+      child: BlocBuilder<AppThemeCubit, AppThemeState>(
         builder: (context, state) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: AppStrings.appName,
             theme: getThemeDataLight(),
             darkTheme: getThemeDataDark(),
-            themeMode: AppCubit.get(context).isDark
+            themeMode: AppThemeCubit.get(context).isDark
                 ? ThemeMode.dark
                 : ThemeMode.light,
             // themeMode: state.isDark ? ThemeMode.dark : ThemeMode.light,

@@ -6,7 +6,6 @@ import 'package:country_explorer/features/countries/data/models/sub_models/flags
 import 'package:country_explorer/features/countries/data/models/sub_models/languages_model.dart';
 import 'package:country_explorer/features/countries/data/models/sub_models/maps_model.dart';
 import 'package:country_explorer/features/countries/data/models/sub_models/name_model.dart';
-import 'package:country_explorer/features/countries/data/models/sub_models/postal_code_model.dart';
 
 class CountriesModel {
   final NameModel name;
@@ -27,7 +26,6 @@ class CountriesModel {
   final CoatsOfArmsModel coatsOfArms;
   final String? startOfWeek;
   final CapitalInfoModel capitalInfo;
-  final PostalCodeModel postalCode;
 
   const CountriesModel({
     required this.name,
@@ -48,7 +46,6 @@ class CountriesModel {
     required this.coatsOfArms,
     required this.startOfWeek,
     required this.capitalInfo,
-    required this.postalCode,
   });
 
   factory CountriesModel.fromJson(Map<String, dynamic> json) => CountriesModel(
@@ -70,6 +67,5 @@ class CountriesModel {
         coatsOfArms: CoatsOfArmsModel.fromJson(json['coatOfArms'] ?? {}),
         startOfWeek: json['startOfWeek'] ?? AppStrings.notAvailable,
         capitalInfo: CapitalInfoModel.fromJson(json['capitalInfo'] ?? []),
-        postalCode: PostalCodeModel.fromJson(json['postalCode'] ?? {}),
       );
 }

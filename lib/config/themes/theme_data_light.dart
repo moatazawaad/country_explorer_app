@@ -8,12 +8,10 @@ ThemeData getThemeDataLight() => ThemeData(
       useMaterial3: true,
       scaffoldBackgroundColor: AppColors.white,
       primaryColor: AppHexColors.darkBlue,
-      hintColor: AppColors.grey,
+      hintColor: AppColors.white,
       appBarTheme: const AppBarTheme(
-        // color: AppColors.white,
         elevation: 0,
         centerTitle: true,
-        // systemOverlayStyle: SystemUiOverlayStyle.light,
         titleTextStyle: TextStyle(
           color: AppHexColors.darkBlue,
           fontSize: 18,
@@ -57,7 +55,7 @@ ThemeData getThemeDataLight() => ThemeData(
           color: AppColors.redAccent,
         ),
         labelSmall: TextStyle(
-          fontSize: 18,
+          fontSize: 16,
           color: AppColors.grey,
         ),
       ),

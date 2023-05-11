@@ -4,7 +4,7 @@ import 'package:country_explorer/core/api/status_code.dart';
 import 'package:dio/dio.dart';
 import 'package:dio/io.dart';
 import '../../features/countries/data/models/countries_model.dart';
-import '../error/full_exception.dart';
+import '../error/exception.dart';
 import '../network/remote/end_points.dart';
 import 'api_consumer.dart';
 
@@ -26,25 +26,8 @@ class DioConsumer implements ApiConsumer {
       ..validateStatus = (status) {
         return status! < StatusCode.internalServerError;
       };
-    // client.interceptors.add(sl<AppIntercepters>());
-    // if (kDebugMode) {
-    //   client.interceptors.add(sl<LogInterceptor>());
-    // }
   }
 
-  // @override
-  // Future<List<CountriesModel>> get(String path, {Map<String, dynamic>? queryParameters}) async {
-  //   try {
-  //     final response = await client.get(path, queryParameters: queryParameters);
-  //     // if (response.data == null) {
-  //     //   return [];
-  //     // }
-  //     return _handleResponseAsJson(response);
-  //   } on DioError catch (error) {
-  //     _handleDioError(error);
-  //   }
-  //   return [];
-  // }
 
   @override
   Future<List<CountriesModel>> get(String path, {Map<String, dynamic>? queryParameters}) async {

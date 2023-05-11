@@ -4,12 +4,12 @@ import 'package:meta/meta.dart';
 
 import '../../../../core/network/local/cache_helper.dart';
 
-part 'app_state.dart';
+part 'app_theme_state.dart';
 
-class AppCubit extends Cubit<AppState> {
-  AppCubit() : super(AppInitial());
+class AppThemeCubit extends Cubit<AppThemeState> {
+  AppThemeCubit() : super(AppInitial());
 
-  static AppCubit get(context) => BlocProvider.of(context);
+  static AppThemeCubit get(context) => BlocProvider.of(context);
 
 
   bool isDark = false;

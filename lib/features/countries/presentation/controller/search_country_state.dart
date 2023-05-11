@@ -27,10 +27,6 @@ class SearchCountrySuccess extends SearchCountryState {
 
   const SearchCountrySuccess({required this.country});
 
-  // final List<CountriesModel> country;
-  //
-  // SearchCountrySuccess(this.country);
-
   @override
   List<Object> get props => [country];
 }

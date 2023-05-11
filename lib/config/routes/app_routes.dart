@@ -1,12 +1,13 @@
+import 'package:country_explorer/core/widget/error_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import '../../core/utils/app_strings.dart';
 import '../../features/countries/data/models/countries_model.dart';
+import '../../features/countries/presentation/components/my_app_bar.dart';
 import '../../features/countries/presentation/controller/country_cubit.dart';
 import '../../features/countries/presentation/screens/all_coutries_screen.dart';
 import '../../features/countries/presentation/screens/country_details_screen.dart';
 import '../../features/countries/presentation/screens/home_screen.dart';
-import '../../features/countries/presentation/screens/search_name_screen.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
 import '../../injection.dart';
 
@@ -15,10 +16,8 @@ class Routes {
   static const String homeScreen = '/homeScreen';
   static const String allCountriesScreen = '/allCountriesScreen';
   static const String countryDetails = '/countryDetails';
-  static const String searchNameScreen = '/searchNameScreen';
 }
 
-/// on generate route better for all projects specially for big one
 class AppRoutes {
   static Route? onGenerateRoute(RouteSettings routeSettings) {
     switch (routeSettings.name) {
@@ -29,7 +28,7 @@ class AppRoutes {
 
       case Routes.homeScreen:
         return MaterialPageRoute(builder: (context) {
-          return  HomeScreen();
+          return HomeScreen();
         });
 
       case Routes.allCountriesScreen:
@@ -40,17 +39,12 @@ class AppRoutes {
           );
         }));
 
-      case Routes.searchNameScreen:
-        return MaterialPageRoute(builder: (context) {
-          return SearchNameScreen();
-        });
-
       case Routes.countryDetails:
         final country = routeSettings.arguments as CountriesModel;
         return MaterialPageRoute(builder: ((context) {
           return BlocProvider(
             create: ((context) => getIt<CountryCubit>()),
-            child:  CountryDetailsScreen(country: country),
+            child: CountryDetailsScreen(country: country),
           );
         }));
 
@@ -61,10 +55,9 @@ class AppRoutes {
 
   static Route<dynamic> undefinedRoute() {
     return MaterialPageRoute(
-        builder: ((context) => const Scaffold(
-              body: Center(
-                child: Text('no route found'),
-              ),
+        builder: ((context) =>  Scaffold(
+              appBar: MyAppBar(showThemeButton: false,),
+          body: ErrorScreen(context,text: AppStrings.wrong, text2: AppStrings.noRouteFound),
             )));
   }
 }
