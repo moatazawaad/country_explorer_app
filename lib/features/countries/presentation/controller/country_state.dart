@@ -18,10 +18,6 @@ class CountrySuccess extends CountryState {
 
   const CountrySuccess({required this.country});
 
-  // final List<CountriesModel> country;
-  //
-  // CountrySuccess(this.country);
-
   @override
   List<Object> get props => [country];
 }

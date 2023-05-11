@@ -8,7 +8,7 @@ ThemeData getThemeDataDark() => ThemeData(
       useMaterial3: true,
       scaffoldBackgroundColor: AppHexColors.dark2,
       primaryColor: AppHexColors.darkBlue,
-      hintColor: AppHexColors.dark,
+      hintColor: AppHexColors.dark2,
       appBarTheme: const AppBarTheme(
         color: AppHexColors.dark2,
         elevation: 0,
@@ -50,7 +50,6 @@ ThemeData getThemeDataDark() => ThemeData(
           color: AppColors.white,
           fontSize: 16,
         ),
-
         titleLarge: TextStyle(
           color: AppColors.white,
           fontSize: 16,
@@ -63,9 +62,6 @@ ThemeData getThemeDataDark() => ThemeData(
           fontSize: 14,
           color: AppColors.redAccent,
         ),
-        labelSmall: TextStyle(
-          fontSize: 16,
-          color: AppColors.grey
-        ),
+        labelSmall: TextStyle(fontSize: 16, color: AppColors.grey),
       ),
     );

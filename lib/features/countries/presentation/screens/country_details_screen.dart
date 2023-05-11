@@ -6,7 +6,7 @@ import '../../../../core/utils/asstes_manager.dart';
 import '../../../../core/utils/format_population.dart';
 import '../../../../web_view_screen.dart';
 import '../../data/models/countries_model.dart';
-import '../components/app_bar.dart';
+import '../components/my_app_bar.dart';
 import '../controller/country_cubit.dart';
 
 class CountryDetailsScreen extends StatelessWidget {
@@ -494,51 +494,6 @@ class CountryDetailsScreen extends StatelessWidget {
                               ),
                               width: context.width * 0.5,
                               child: Text(
-                                AppStrings.map,
-                                textAlign: TextAlign.center,
-                                style: Theme.of(context).textTheme.titleLarge,
-                              ),
-                            ),
-                            Expanded(
-                              child: Container(
-                                height: 2,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                            ),
-                          ],
-                        ),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    WebViewScreen(
-                                  url: country.maps.googleMaps,
-                                ),
-                              ),
-                            );
-                          },
-                          child: Text(
-                            AppStrings.browseTheLocation,
-                            style: Theme.of(context).textTheme.titleLarge,
-                          ),
-                        ),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Container(
-                                height: 2,
-                                color: Theme.of(context).primaryColor,
-                              ),
-                            ),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12),
-                                color: Theme.of(context).primaryColor,
-                              ),
-                              width: context.width * 0.5,
-                              child: Text(
                                 AppStrings.coatOfArms,
                                 textAlign: TextAlign.center,
                                 style: Theme.of(context).textTheme.titleLarge,
@@ -563,6 +518,51 @@ class CountryDetailsScreen extends StatelessWidget {
                               width: double.infinity,
                               fit: BoxFit.fill,
                             ),
+                          ),
+                        ),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Container(
+                                height: 2,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                color: Theme.of(context).primaryColor,
+                              ),
+                              width: context.width * 0.5,
+                              child: Text(
+                                AppStrings.map,
+                                textAlign: TextAlign.center,
+                                style: Theme.of(context).textTheme.titleLarge,
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                height: 2,
+                                color: Theme.of(context).primaryColor,
+                              ),
+                            ),
+                          ],
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (BuildContext context) =>
+                                    WebViewScreen(
+                                      url: country.maps.googleMaps,
+                                    ),
+                              ),
+                            );
+                          },
+                          child: Text(
+                            AppStrings.browseTheLocation,
+                            style: Theme.of(context).textTheme.titleLarge,
                           ),
                         ),
                       ],

@@ -9,7 +9,7 @@ import 'features/countries/data/repositories/country_repository_impl.dart';
 import 'features/countries/domain/repositories/country_repository.dart';
 import 'features/countries/domain/usecases/get_countries_usecase.dart';
 import 'features/countries/domain/usecases/search_countries_name_usecase.dart';
-import 'features/countries/presentation/controller/app_cubit.dart';
+import 'features/countries/presentation/controller/app_theme_cubit.dart';
 import 'features/countries/presentation/controller/country_cubit.dart';
 import 'features/countries/presentation/controller/search_country_cubit.dart';
 
@@ -17,7 +17,7 @@ final getIt = GetIt.instance;
 
 void initGetIt() {
   getIt.registerLazySingleton<CountryCubit>(() => CountryCubit(getIt()));
-  getIt.registerLazySingleton<AppCubit>(()=> AppCubit());
+  getIt.registerLazySingleton<AppThemeCubit>(()=> AppThemeCubit());
   getIt.registerLazySingleton<SearchCountryCubit>(
       () => SearchCountryCubit(getIt()));
   getIt.registerLazySingleton<GetCountriesUseCase>(
