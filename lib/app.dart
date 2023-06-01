@@ -5,7 +5,7 @@ import 'config/routes/app_routes.dart';
 import 'config/themes/thene_data_dark.dart';
 import 'core/utils/app_strings.dart';
 import 'features/countries/presentation/controller/app_theme_cubit.dart';
-import 'injection.dart';
+import 'core/injection/injection.dart';
 
 class CountryExplorer extends StatelessWidget {
   const CountryExplorer({super.key, required this.isDark});

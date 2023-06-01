@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
-import 'package:country_explorer/bloc_observer.dart';
-import 'package:country_explorer/injection.dart';
+import 'package:country_explorer/core/bloc_observer/bloc_observer.dart';
+import 'package:country_explorer/core/injection/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

@@ -1,17 +1,17 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'core/api/api_consumer.dart';
-import 'core/api/dio_consumer.dart';
-import 'core/network/remote/network_info.dart';
-import 'features/countries/data/datasource/country_remote_datasource.dart';
-import 'features/countries/data/repositories/country_repository_impl.dart';
-import 'features/countries/domain/repositories/country_repository.dart';
-import 'features/countries/domain/usecases/get_countries_usecase.dart';
-import 'features/countries/domain/usecases/search_countries_name_usecase.dart';
-import 'features/countries/presentation/controller/app_theme_cubit.dart';
-import 'features/countries/presentation/controller/country_cubit.dart';
-import 'features/countries/presentation/controller/search_country_cubit.dart';
+import '../api/api_consumer.dart';
+import '../api/dio_consumer.dart';
+import '../network/remote/network_info.dart';
+import '../../features/countries/data/datasource/country_remote_datasource.dart';
+import '../../features/countries/data/repositories/country_repository_impl.dart';
+import '../../features/countries/domain/repositories/country_repository.dart';
+import '../../features/countries/domain/usecases/get_countries_usecase.dart';
+import '../../features/countries/domain/usecases/search_countries_name_usecase.dart';
+import '../../features/countries/presentation/controller/app_theme_cubit.dart';
+import '../../features/countries/presentation/controller/country_cubit.dart';
+import '../../features/countries/presentation/controller/search_country_cubit.dart';
 
 final getIt = GetIt.instance;
 

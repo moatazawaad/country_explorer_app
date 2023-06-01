@@ -1,5 +1,7 @@
+import 'package:country_explorer/core/utils/assets_manager.dart';
 import 'package:country_explorer/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
+
 import '../utils/app_strings.dart';
 
 class NoConnectionScreen extends StatelessWidget {
@@ -7,21 +9,21 @@ class NoConnectionScreen extends StatelessWidget {
   final String? message;
   final Function(String)? onRetry;
 
-  const NoConnectionScreen({Key? key, this.onPress, this.message, this.onRetry
-  }) : super(key: key);
+  const NoConnectionScreen({Key? key, this.onPress, this.message, this.onRetry})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Theme.of(context).scaffoldBackgroundColor,
+    return Container(
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Center(
-            child: Icon(
-              Icons.warning_amber_rounded,
-              color: Colors.redAccent,
-              size: 130,
+          Center(
+            child: Image(
+              image: AssetImage(GifAssets.noConnectionError),
+              height: context.height * 0.2,
             ),
           ),
           Container(

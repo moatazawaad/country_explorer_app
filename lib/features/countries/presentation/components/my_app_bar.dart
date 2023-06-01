@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../../../core/utils/app_hex_colors.dart';
+
 import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/asstes_manager.dart';
+import '../../../../core/utils/assets_manager.dart';
 import '../controller/app_theme_cubit.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -18,19 +17,19 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     ];
     return AppBar(
-      iconTheme: IconThemeData(color: AppHexColors.darkBlue),
+      // iconTheme: IconThemeData(color: AppHexColors.dark),
       title: const Text(
         AppStrings.appName,
       ),
       leading: showThemeButton
           ? IconButton(
-        icon: AppThemeCubit.get(context).isDark
-            ? const Icon(Icons.nightlight_outlined)
-            : const Icon(Icons.wb_sunny_outlined),
-        onPressed: () {
-          AppThemeCubit.get(context).changeAppTheme();
-        },
-      )
+              icon: AppThemeCubit.get(context).isDark
+                  ? const Icon(Icons.nightlight_outlined)
+                  : const Icon(Icons.wb_sunny_outlined),
+              onPressed: () {
+                AppThemeCubit.get(context).changeAppTheme();
+              },
+            )
           : null,
       actions: actions,
     );

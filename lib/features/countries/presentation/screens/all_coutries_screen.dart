@@ -1,4 +1,4 @@
-import 'package:country_explorer/core/utils/asstes_manager.dart';
+import 'package:country_explorer/core/utils/assets_manager.dart';
 import 'package:country_explorer/core/utils/media_query.dart';
 import 'package:country_explorer/features/countries/presentation/components/countries_grid.dart';
 import 'package:flutter/material.dart';

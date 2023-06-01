@@ -1,20 +1,21 @@
 import 'package:country_explorer/core/utils/media_query.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../config/routes/app_routes.dart';
+import '../../../../core/injection/injection.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_hex_colors.dart';
 import '../../../../core/utils/app_strings.dart';
-import '../../../../core/utils/asstes_manager.dart';
+import '../../../../core/utils/assets_manager.dart';
 import '../../../../core/widget/error_screen.dart';
 import '../../../../core/widget/no_connection_screen.dart';
-import '../../../../injection.dart';
 import '../../data/models/countries_model.dart';
 import '../controller/search_country_cubit.dart';
 import 'countries_grid.dart';
 import 'my_elevated_button.dart';
 
-List<String> countryNameToExclude = ['Israel', 'Israe',];
+List<String> countryNameToExclude = ['Israel'];
 List<CountriesModel> country = [];
 List<CountriesModel> filteredCountries = [];
 
@@ -124,7 +125,6 @@ Widget HomeScreenBody(
                               ),
                               onTap: () {
                                 searchController.text = "Palestine";
-                                countryNameToExclude.clear();
                                 SearchCountryCubit.get(context)
                                     .searchCountriesName("Palestine");
                               },
@@ -156,7 +156,8 @@ Widget HomeScreenBody(
                         ),
                       if (state is SearchCountryError && isConnected == true)
                         ErrorScreen(context,
-                            text: AppStrings.notFound,
+                            text: AppStrings.countryNotFound(
+                                searchController.text),
                             text2: AppStrings.tryAnotherCountry),
                     ],
                   ),

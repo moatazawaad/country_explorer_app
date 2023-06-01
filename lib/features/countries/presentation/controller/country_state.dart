@@ -30,5 +30,3 @@ class CountryError extends CountryState {
   @override
   List<Object> get props => [msg];
 }
-
-class ChangeAppThemeState extends CountryState {}
