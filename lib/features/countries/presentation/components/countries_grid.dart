@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+
 import '../../../../config/routes/app_routes.dart';
-import '../../../../core/utils/asstes_manager.dart';
+import '../../../../core/utils/assets_manager.dart';
 import '../../data/models/countries_model.dart';
 
-Widget CountriesGrid(BuildContext context, List<CountriesModel> filteredCountries) =>
+Widget CountriesGrid(
+        BuildContext context, List<CountriesModel> filteredCountries) =>
     GridView.count(
       shrinkWrap: true,
       primary: false,

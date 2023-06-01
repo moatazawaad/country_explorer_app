@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../core/utils/app_colors.dart';
 import '../../core/utils/app_hex_colors.dart';
 
 ThemeData getThemeDataDark() => ThemeData(
       useMaterial3: true,
-      scaffoldBackgroundColor: AppHexColors.dark2,
-      primaryColor: AppHexColors.darkBlue,
-      hintColor: AppHexColors.dark2,
+      scaffoldBackgroundColor: AppColors.black,
+      primaryColor: AppHexColors.dark,
+      hintColor: AppColors.black,
       appBarTheme: const AppBarTheme(
-        color: AppHexColors.dark2,
+        color: AppColors.black,
         elevation: 0,
         centerTitle: true,
         titleTextStyle: TextStyle(
@@ -19,6 +18,9 @@ ThemeData getThemeDataDark() => ThemeData(
           fontWeight: FontWeight.bold,
         ),
       ),
+      iconTheme: IconThemeData(
+        color: AppColors.white,
+      ),
       iconButtonTheme: IconButtonThemeData(
         style: ButtonStyle(
             foregroundColor: MaterialStatePropertyAll(AppColors.white)),
@@ -26,7 +28,7 @@ ThemeData getThemeDataDark() => ThemeData(
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           elevation: MaterialStatePropertyAll(8),
-          backgroundColor: MaterialStatePropertyAll(AppHexColors.darkBlue),
+          backgroundColor: MaterialStatePropertyAll(AppHexColors.dark),
         ),
       ),
       textTheme: TextTheme(
@@ -43,7 +45,7 @@ ThemeData getThemeDataDark() => ThemeData(
           decorationStyle: TextDecorationStyle.solid,
         ),
         bodySmall: TextStyle(
-          color: AppHexColors.darkBlue,
+          color: AppHexColors.dark,
           fontSize: 16,
         ),
         bodyLarge: TextStyle(

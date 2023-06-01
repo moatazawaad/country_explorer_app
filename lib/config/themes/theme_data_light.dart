@@ -1,6 +1,5 @@
 import 'package:country_explorer/core/utils/app_hex_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../core/utils/app_colors.dart';
 
@@ -17,6 +16,13 @@ ThemeData getThemeDataLight() => ThemeData(
           fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
+      ),
+      iconTheme: IconThemeData(
+        color: AppColors.black,
+      ),
+      iconButtonTheme: IconButtonThemeData(
+        style: ButtonStyle(
+            foregroundColor: MaterialStatePropertyAll(AppColors.black)),
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(

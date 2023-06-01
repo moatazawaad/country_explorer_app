@@ -2,6 +2,7 @@ class AppStrings {
   static const appName = "Country Explorer";
   static const exploreTheWorld = 'Explore the world';
   static const browseTheLocation = 'Browse The Location';
+  static const fullScreen = 'Full Screen';
   static const browseAllCountries = "Browse All Countries";
   static const notAvailable = "N/A";
   static const nativeName = 'Native Name';
@@ -25,12 +26,12 @@ class AppStrings {
   static const longitude = ', Longitude: ';
   static const wrong = 'Something Went Wrong';
   static const noInternet = 'No Internet Connection';
-  static const tryAgain = 'Try Again';
+  static const tryAgain = 'Try again later';
   static const tryAnotherCountry = 'Try another country';
   static const reloadScreen = 'Reload Screen';
-  static const notFound = 'Sorry, country not found';
+  static countryNotFound(String name) => 'Sorry, "$name" not found';
   static const noRouteFound = 'Sorry, no route found';
-  static const searchHintText = 'Type a word to search';
+  static const searchHintText = 'Type a country to search';
   static const searchNote = '*Note: Use english language for search.';
   static const palestine = 'Did you mean "Palestine"';
 }

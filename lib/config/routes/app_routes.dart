@@ -9,7 +9,7 @@ import '../../features/countries/presentation/screens/all_coutries_screen.dart';
 import '../../features/countries/presentation/screens/country_details_screen.dart';
 import '../../features/countries/presentation/screens/home_screen.dart';
 import '../../features/splash/presentation/screens/splash_screen.dart';
-import '../../injection.dart';
+import '../../core/injection/injection.dart';
 
 class Routes {
   static const String initialRoute = '/';
