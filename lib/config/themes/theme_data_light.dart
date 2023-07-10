@@ -8,6 +8,19 @@ ThemeData getThemeDataLight() => ThemeData(
       scaffoldBackgroundColor: AppColors.white,
       primaryColor: AppHexColors.darkBlue,
       hintColor: AppColors.white,
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        elevation: 4,
+        backgroundColor: AppHexColors.darkBlue,
+        iconSize: 30,
+      ),
+      tooltipTheme: TooltipThemeData(
+        textStyle: TextStyle(
+            color: Colors.white, fontSize: 14, decoration: TextDecoration.none),
+      ),
+      drawerTheme: DrawerThemeData(
+        backgroundColor: AppColors.white,
+        elevation: 4,
+      ),
       appBarTheme: const AppBarTheme(
         elevation: 0,
         centerTitle: true,
@@ -64,5 +77,6 @@ ThemeData getThemeDataLight() => ThemeData(
           fontSize: 16,
           color: AppColors.grey,
         ),
+        headlineMedium: TextStyle(fontSize: 18, color: AppColors.white),
       ),
     );

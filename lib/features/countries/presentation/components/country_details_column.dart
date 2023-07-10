@@ -440,6 +440,9 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
               height: context.height / 5,
               width: double.infinity,
               fit: BoxFit.fill,
+              imageErrorBuilder: (context, error, stackTrace) {
+                return Text(AppStrings.notAvailable);
+              },
             ),
           ),
         ),
@@ -483,7 +486,7 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
             );
           },
           child: Text(
-            AppStrings.fullScreen,
+            AppStrings.fullScreenMap,
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),

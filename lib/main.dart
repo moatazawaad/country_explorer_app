@@ -15,7 +15,7 @@ void main() async {
   initGetIt();
   await CacheHelper.init();
   bool isDark = CacheHelper.getBoolean(key: 'isDark') ?? false;
-  runApp(CountryExplorer(isDark: isDark,));
+  runApp(CountryExplorer(
+    isDark: isDark,
+  ));
 }
-
-

@@ -1,9 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
-import '../api/api_consumer.dart';
-import '../api/dio_consumer.dart';
-import '../network/remote/network_info.dart';
+
 import '../../features/countries/data/datasource/country_remote_datasource.dart';
 import '../../features/countries/data/repositories/country_repository_impl.dart';
 import '../../features/countries/domain/repositories/country_repository.dart';
@@ -12,12 +10,15 @@ import '../../features/countries/domain/usecases/search_countries_name_usecase.d
 import '../../features/countries/presentation/controller/app_theme_cubit.dart';
 import '../../features/countries/presentation/controller/country_cubit.dart';
 import '../../features/countries/presentation/controller/search_country_cubit.dart';
+import '../api/api_consumer.dart';
+import '../api/dio_consumer.dart';
+import '../network/remote/network_info.dart';
 
 final getIt = GetIt.instance;
 
 void initGetIt() {
   getIt.registerLazySingleton<CountryCubit>(() => CountryCubit(getIt()));
-  getIt.registerLazySingleton<AppThemeCubit>(()=> AppThemeCubit());
+  getIt.registerLazySingleton<AppThemeCubit>(() => AppThemeCubit());
   getIt.registerLazySingleton<SearchCountryCubit>(
       () => SearchCountryCubit(getIt()));
   getIt.registerLazySingleton<GetCountriesUseCase>(
@@ -32,8 +33,7 @@ void initGetIt() {
       () => NetworkInfoImpl(connectionChecker: getIt()));
   getIt.registerLazySingleton<ApiConsumer>(() => DioConsumer(client: getIt()));
   getIt.registerLazySingleton(() => InternetConnectionChecker());
-  getIt.registerLazySingleton(() =>Dio());
-
+  getIt.registerLazySingleton(() => Dio());
 }
 
 Dio createAndSetupDio() {

@@ -1,6 +1,8 @@
 # country_explorer
 
-Explore the world, with every country and every detail
+[//]: # (Note: Please note that the data used in this application is dummy data. As of [30 June 2023], )
+
+[//]: # (the actual API that provides real-time data is temporarily closed. Therefore, the information displayed in the app may not reflect the latest or real-world data.)
 
 ## Getting Started
 

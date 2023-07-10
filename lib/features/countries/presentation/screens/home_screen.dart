@@ -1,8 +1,9 @@
+import 'package:connectivity/connectivity.dart';
 import 'package:country_explorer/features/countries/presentation/components/home_screen_body.dart';
 import 'package:flutter/material.dart';
+
 import '../../data/models/countries_model.dart';
 import '../components/my_app_bar.dart';
-import 'package:connectivity/connectivity.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -43,7 +44,8 @@ class _HomeScreenState extends State<HomeScreen> {
       },
       child: Scaffold(
         appBar: MyAppBar(showThemeButton: true),
-        body: HomeScreenBody(context,country,isConnected,focusNode,searchController),
+        body: HomeScreenBody(
+            context, country, isConnected, focusNode, searchController),
       ),
     );
   }

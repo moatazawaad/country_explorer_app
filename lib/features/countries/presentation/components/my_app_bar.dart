@@ -17,7 +17,6 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     ];
     return AppBar(
-      // iconTheme: IconThemeData(color: AppHexColors.dark),
       title: const Text(
         AppStrings.appName,
       ),
