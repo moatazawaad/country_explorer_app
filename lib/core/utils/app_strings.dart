@@ -1,8 +1,8 @@
 class AppStrings {
   static const appName = "Country Explorer";
-  static const exploreTheWorld = 'Explore the world';
+  static const exploreTheWorld = 'Explore The World';
   static const browseTheLocation = 'Browse The Location';
-  static const fullScreen = 'Full Screen';
+  static const fullScreenMap = 'Full Screen Map';
   static const browseAllCountries = "Browse All Countries";
   static const notAvailable = "N/A";
   static const nativeName = 'Native Name';

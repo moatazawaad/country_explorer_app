@@ -5,7 +5,6 @@ abstract class CountryState extends Equatable {
   const CountryState();
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
 }
 

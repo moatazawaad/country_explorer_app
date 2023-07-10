@@ -1,6 +1,8 @@
 import 'dart:async';
+
 import 'package:country_explorer/features/splash/presentation/components/splash_screen_body.dart';
 import 'package:flutter/material.dart';
+
 import '../../../../config/routes/app_routes.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
   _goNext() => Navigator.pushReplacementNamed(context, Routes.homeScreen);
 
   _startDelay() {
-    _timer = Timer(const Duration(milliseconds: 2500), () => _goNext());
+    _timer = Timer(const Duration(milliseconds: 2000), () => _goNext());
   }
 
   @override

@@ -1,4 +1,3 @@
-import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -11,9 +10,7 @@ class AppThemeCubit extends Cubit<AppThemeState> {
 
   static AppThemeCubit get(context) => BlocProvider.of(context);
 
-
   bool isDark = false;
-
 
   void changeAppTheme({bool? fromShared}) {
     if (fromShared != null) {

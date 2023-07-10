@@ -6,4 +6,5 @@ class AppColors {
   static const Color grey = Colors.grey;
   static const Color redAccent = Colors.redAccent;
   static const Color blue = Colors.blueAccent;
+  static Color? grey300 = Colors.grey[300];
 }

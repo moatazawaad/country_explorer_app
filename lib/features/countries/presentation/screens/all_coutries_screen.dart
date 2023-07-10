@@ -1,10 +1,11 @@
-import 'package:country_explorer/core/utils/assets_manager.dart';
 import 'package:country_explorer/core/utils/media_query.dart';
-import 'package:country_explorer/features/countries/presentation/components/countries_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../../../core/utils/assets_manager.dart';
 import '../../../../core/widget/no_connection_screen.dart';
 import '../../data/models/countries_model.dart';
+import '../components/countries_grid.dart';
 import '../components/my_app_bar.dart';
 import '../controller/country_cubit.dart';
 

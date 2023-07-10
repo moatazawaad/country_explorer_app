@@ -4,6 +4,7 @@ const String gifPath = 'assets/gif';
 class ImageAssets {
   static const String galaxyMap = '$imagePath/GalaxyMap.png';
   static const String global = '$imagePath/Global.png';
+  static const String imageError = '$imagePath/Image_Error.png';
 }
 
 class GifAssets {

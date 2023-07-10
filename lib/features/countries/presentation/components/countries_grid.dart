@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../config/routes/app_routes.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/assets_manager.dart';
 import '../../data/models/countries_model.dart';
 
@@ -26,13 +27,22 @@ Widget CountriesGrid(
               child: Column(
                 children: [
                   Expanded(
-                    child: ClipRRect(
+                    child: Material(
+                      elevation: 12,
+                      shadowColor: AppColors.grey,
+                      color: Theme.of(context).hintColor,
                       borderRadius: BorderRadius.circular(12),
-                      child: FadeInImage.assetNetwork(
-                        placeholder: GifAssets.spinningGlobe640,
-                        image: filteredCountries[index].flags.png,
-                        width: double.infinity,
-                        fit: BoxFit.fill,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(12),
+                        child: FadeInImage.assetNetwork(
+                          placeholder: GifAssets.spinningGlobe640,
+                          image: filteredCountries[index].flags.png,
+                          width: double.infinity,
+                          fit: BoxFit.fill,
+                          imageErrorBuilder: (context, error, stackTrace) {
+                            return Image.asset(ImageAssets.imageError);
+                          },
+                        ),
                       ),
                     ),
                   ),

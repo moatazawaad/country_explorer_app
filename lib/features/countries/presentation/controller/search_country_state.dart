@@ -5,10 +5,9 @@ abstract class SearchCountryState extends Equatable {
   const SearchCountryState();
 
   @override
-  // TODO: implement props
   List<Object?> get props => [];
-
 }
+
 class SearchCountryInitial extends SearchCountryState {}
 
 class SearchCountryLoading extends SearchCountryState {}
@@ -30,4 +29,3 @@ class SearchCountrySuccess extends SearchCountryState {
   @override
   List<Object> get props => [country];
 }
-
