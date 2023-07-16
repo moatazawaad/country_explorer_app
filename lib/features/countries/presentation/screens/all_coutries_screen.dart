@@ -26,6 +26,12 @@ class _AllCountriesScreenState extends State<AllCountriesScreen> {
   }
 
   @override
+  void dispose() {
+    BlocProvider.of<CountryCubit>(context).close();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     List<String> countryNameToExclude = ['Israel', 'Antarctica'];
     List<CountriesModel> countries = [];

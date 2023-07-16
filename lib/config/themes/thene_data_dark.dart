@@ -8,6 +8,14 @@ ThemeData getThemeDataDark() => ThemeData(
       scaffoldBackgroundColor: AppColors.black,
       primaryColor: AppHexColors.dark,
       hintColor: AppColors.black,
+      // textButtonTheme: TextButtonThemeData(
+      //   style: ButtonStyle(
+      //     backgroundColor: MaterialStatePropertyAll(AppHexColors.indigo2),
+      //   ),
+      // ),
+      // dialogTheme: DialogTheme(
+      //   backgroundColor: AppHexColors.dark2,
+      // ),
       tooltipTheme: TooltipThemeData(
         textStyle: TextStyle(
             color: Colors.white, fontSize: 14, decoration: TextDecoration.none),
@@ -77,7 +85,8 @@ ThemeData getThemeDataDark() => ThemeData(
           fontSize: 14,
           color: AppColors.redAccent,
         ),
-        labelSmall: TextStyle(fontSize: 16, color: AppColors.grey),
+        labelSmall: TextStyle(fontSize: 15, color: AppColors.grey),
         headlineMedium: TextStyle(fontSize: 18, color: AppHexColors.dark),
+        headlineSmall: TextStyle(fontSize: 18, color: AppColors.white),
       ),
     );

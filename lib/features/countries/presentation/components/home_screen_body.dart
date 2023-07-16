@@ -78,28 +78,19 @@ Widget HomeScreenBody(
                           border: UnderlineInputBorder(
                               borderRadius: BorderRadius.circular(30)),
                           hintStyle: Theme.of(context).textTheme.labelSmall,
-                          suffixIcon: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                borderRadius: BorderRadius.only(
-                                  bottomRight: Radius.circular(30),
-                                  topRight: Radius.circular(30),
-                                ),
-                              ),
-                              child: IconButton(
-                                onPressed: () {
-                                  if (searchController.text.isNotEmpty) {
-                                    String message =
-                                        searchController.text.trim();
-                                    SearchCountryCubit.get(context)
-                                        .searchCountriesName(message);
-                                  }
-                                },
-                                icon: Icon(
-                                  Icons.search,
-                                  color: AppHexColors.darkBlue,
-                                ),
-                              )),
+                          suffixIcon: IconButton(
+                            onPressed: () {
+                              if (searchController.text.isNotEmpty) {
+                                String message = searchController.text.trim();
+                                SearchCountryCubit.get(context)
+                                    .searchCountriesName(message);
+                              }
+                            },
+                            icon: Icon(
+                              Icons.search,
+                              color: AppHexColors.darkBlue,
+                            ),
+                          ),
                         ),
                       ),
                       Column(
@@ -112,11 +103,12 @@ Widget HomeScreenBody(
                           if (state is SearchCountrySuccess &&
                               country.isNotEmpty &&
                               isConnected == true &&
-                              (searchController.text.contains("Isr") ||
-                                  searchController.text.contains("isr")))
+                              (searchController.text.contains(AppStrings.Isr) ||
+                                  searchController.text
+                                      .contains(AppStrings.isr)))
                             InkWell(
                               child: Text(
-                                AppStrings.palestine,
+                                AppStrings.palestineCorrection,
                                 style: TextStyle(
                                     color: AppColors.blue,
                                     fontStyle: FontStyle.italic,
@@ -124,9 +116,9 @@ Widget HomeScreenBody(
                                     decoration: TextDecoration.none),
                               ),
                               onTap: () {
-                                searchController.text = "Palestine";
+                                searchController.text = AppStrings.palestine;
                                 SearchCountryCubit.get(context)
-                                    .searchCountriesName("Palestine");
+                                    .searchCountriesName(AppStrings.palestine);
                               },
                             ),
                         ],
@@ -144,7 +136,7 @@ Widget HomeScreenBody(
                           country.isNotEmpty &&
                           isConnected == true)
                         CountriesGrid(context, filteredCountries),
-                      if (state is SearchCountryError && isConnected == false)
+                      if (isConnected == false)
                         NoConnectionScreen(
                           onPress: () {
                             String? text = searchController.text.trim();

@@ -48,7 +48,26 @@ Widget CountryDetailsBody(BuildContext context, CountriesModel country) =>
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
-                Text(
+                // InkWell(
+                //   onTap: () {
+                //     print('lllllllllllol');
+                //     final text =
+                //         'Latitude: ${country.latitudeLongitude?.join(', Longitude: ') ?? AppStrings.notAvailable}';
+                //     Clipboard.setData(ClipboardData(text: text));
+                //     ScaffoldMessenger.of(context).showSnackBar(
+                //       SnackBar(
+                //         content: Text('Text copied to clipboard'),
+                //       ),
+                //     );
+                //     print('copiiiiiiiiiiied text');
+                //   },
+                //   child: SelectableText(
+                //     'Latitude: ${country.latitudeLongitude?.join(', Longitude: ') ?? AppStrings.notAvailable}',
+                //     style: Theme.of(context).textTheme.bodyLarge,
+                //     textAlign: TextAlign.center,
+                //   ),
+                // ),
+                SelectableText(
                   'Latitude: ${country.latitudeLongitude?.join(', Longitude: ') ?? AppStrings.notAvailable}',
                   style: Theme.of(context).textTheme.bodyLarge,
                   textAlign: TextAlign.center,

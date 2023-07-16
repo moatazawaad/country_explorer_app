@@ -8,6 +8,9 @@ ThemeData getThemeDataLight() => ThemeData(
       scaffoldBackgroundColor: AppColors.white,
       primaryColor: AppHexColors.darkBlue,
       hintColor: AppColors.white,
+      // dialogTheme: DialogTheme(
+      //   backgroundColor: AppHexColors.darkBlue,
+      // ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         elevation: 4,
         backgroundColor: AppHexColors.darkBlue,
@@ -74,9 +77,10 @@ ThemeData getThemeDataLight() => ThemeData(
           color: AppColors.redAccent,
         ),
         labelSmall: TextStyle(
-          fontSize: 16,
+          fontSize: 15,
           color: AppColors.grey,
         ),
         headlineMedium: TextStyle(fontSize: 18, color: AppColors.white),
+        headlineSmall: TextStyle(fontSize: 18, color: AppColors.white),
       ),
     );

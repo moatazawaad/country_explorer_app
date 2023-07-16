@@ -29,7 +29,7 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        Text(country.name.official.toString(),
+        SelectableText(country.name.official.toString(),
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyLarge),
         Text(
@@ -37,9 +37,11 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
           textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
-        Text(country.name.common.toString(),
-            textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.bodyLarge),
+        SelectableText(
+          country.name.common.toString(),
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
         SizedBox(
           height: context.height * 0.01,
         ),
@@ -107,10 +109,10 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
             ),
           ],
         ),
-        Text(country.capital?.join(', ') ?? AppStrings.notAvailable,
+        SelectableText(country.capital?.join(', ') ?? AppStrings.notAvailable,
             textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodyLarge),
-        Text(
+        SelectableText(
           'Latitude: ${country.capitalInfo.latitudeLongitude?.join(AppStrings.longitude) ?? AppStrings.notAvailable}',
           style: Theme.of(context).textTheme.bodyLarge,
           textAlign: TextAlign.center,
@@ -486,7 +488,7 @@ Widget CountryDetailsColumn(BuildContext context, CountriesModel country) =>
             );
           },
           child: Text(
-            AppStrings.fullScreenMap,
+            AppStrings.fullScreenLocation,
             style: Theme.of(context).textTheme.titleLarge,
           ),
         ),

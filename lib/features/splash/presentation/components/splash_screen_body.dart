@@ -7,14 +7,20 @@ Widget SplashScreenBody(BuildContext context) => Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Center(
-          child: Image.asset(
-            ImageAssets.global,
+        Container(
+          alignment: Alignment.center,
+          child: Column(
+            children: [
+              Image.asset(
+                ImageAssets.global,
+              ),
+              Text(
+                AppStrings.exploreTheWorld,
+                style: Theme.of(context).textTheme.headlineLarge,
+                textAlign: TextAlign.center,
+              ),
+            ],
           ),
-        ),
-        Text(
-          AppStrings.exploreTheWorld,
-          style: Theme.of(context).textTheme.headlineLarge,
         ),
       ],
     );

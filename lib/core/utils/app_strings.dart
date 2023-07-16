@@ -2,7 +2,7 @@ class AppStrings {
   static const appName = "Country Explorer";
   static const exploreTheWorld = 'Explore The World';
   static const browseTheLocation = 'Browse The Location';
-  static const fullScreenMap = 'Full Screen Map';
+  static const fullScreenLocation = 'Full Screen Location';
   static const browseAllCountries = "Browse All Countries";
   static const notAvailable = "N/A";
   static const nativeName = 'Native Name';
@@ -32,6 +32,12 @@ class AppStrings {
   static countryNotFound(String name) => 'Sorry, "$name" not found';
   static const noRouteFound = 'Sorry, no route found';
   static const searchHintText = 'Type a country to search';
-  static const searchNote = '*Note: Use english language for search.';
-  static const palestine = 'Did you mean "Palestine"';
+  static const searchNote = '*Note: Use English for search.';
+  static const palestineCorrection = 'Did you mean "Palestine"';
+  static const quiteAppText = 'Are you sure you want to exit the app?';
+  static const quite = 'Quite';
+  static const cancel = 'Cancel';
+  static const palestine = 'Palestine';
+  static const Isr = 'Isr';
+  static const isr = 'isr';
 }
